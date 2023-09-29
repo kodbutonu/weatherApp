@@ -166,7 +166,7 @@ const HomeScreen = () => {
                </View>
              </View>
              <View className="mb-2 space-y-3">
-  <View className="flex-row items-center mx-5 space-x-2" style={{marginTop:20,borderRadius:20,borderWidth:3,borderColor:'white',marginLeft:55,marginRight:30,justifyContent:'center',height:200}}>
+  <View className="flex-row items-center mx-5 space-x-2" style={{marginTop:20,borderRadius:20,borderWidth:3,borderColor:'white',marginLeft:55,marginRight:30,justifyContent:'center',height:180}}>
   <Text className="text-white text-base" style={styles.weatherConditio}>Daily Weather</Text>
  
   <ScrollView
@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height:100,
-    marginTop:40,
+    marginTop:20,
     width:120,
     marginRight:15
   },
@@ -384,7 +384,7 @@ const styles = StyleSheet.create({
     marginRight:10
   },
   temperature: {
-    fontSize: 100,
+    fontSize: 60,
     color: 'white',
     fontWeight: 'bold',
     alignItems:'center',
