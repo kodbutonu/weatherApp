@@ -22,7 +22,7 @@ Projenin yerel olarak çalıştırılabilmesi için aşağıdaki yazılımlara i
 - Bir iOS veya Android cihazı veya bir simülatör/emülatör
 
 ### Uygulama
-Uygulamanın en son sürümünü aşağıdaki linkten indirebilirsiniz:
+Uygulamanın apksını aşağıdan indirebilirsiniz:
 
 [Buradan indirebilirsiniz](https://expo.dev/artifacts/eas/mzd3rfJMceckCcuWRwU5uz.apk)
 
