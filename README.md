@@ -6,7 +6,8 @@ Bu proje, hava tahminlerini görüntülemek ve takip etmek amacıyla geliştiril
 
 <img src="https://github.com/kodbutonu/weatherApp/blob/main/assets/photo_5931581420868845020_y%20(1).jpg" width="800" height="600" style="margin-right: 20px">
 <img src="https://github.com/kodbutonu/weatherApp/blob/main/assets/photo_5931581420868845021_y%20(1).jpg" width="800" height="600" style="margin-right: 20px">
-<img src="https://github.com/kodbutonu/weatherApp/blob/main/assets/photo_5931581420868845022_y%20(1).jpg" width="800" height="600" style="margin-right: 20px">
+<img src="https://github.com/kodbutonu/weatherApp/blob/main/assets/photo_5931581420868845022_y%20(1).jpg" width="800" height="600">
+
 
 
 ## Başlangıç
