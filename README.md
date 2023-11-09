@@ -32,4 +32,4 @@ cd weatherApp
 
 Uygulamanın en son sürümünü aşağıdaki linkten indirebilirsiniz:
 
-[**Buradan indirebilirsiniz**](https://expo.dev/artifacts/eas/mzd3rfJMceckCcuWRwU5uz.apk)
+[Buradan indirebilirsiniz](https://expo.dev/artifacts/eas/mzd3rfJMceckCcuWRwU5uz.apk)
