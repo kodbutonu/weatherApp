@@ -28,3 +28,8 @@ Projenin yerel olarak çalıştırılabilmesi için aşağıdaki yazılımlara i
 ```bash
 git clone https://github.com/your-username/weatherApp.git
 cd weatherApp
+
+
+Uygulamanın en son sürümünü aşağıdaki linkten indirebilirsiniz:
+
+[**Buradan indirebilirsiniz**](https://expo.dev/artifacts/eas/mzd3rfJMceckCcuWRwU5uz.apk)
