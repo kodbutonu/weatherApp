@@ -4,9 +4,9 @@
 
 Bu proje, hava tahminlerini görüntülemek ve takip etmek amacıyla geliştirilen bir React Native uygulamasını içermektedir. Uygulama, kullanıcılara güncel hava durumu bilgilerini sunar ve kullanıcıların istedikleri konumun hava tahminlerini görüntülemelerine olanak tanır.
 
-<img src="https://github.com/kodbutonu/weatherApp/blob/main/assets/photo_5931581420868845020_y%20(1).jpg" width="800" height="600">
-<img src="https://github.com/kodbutonu/weatherApp/blob/main/assets/photo_5931581420868845021_y%20(1).jpg" width="800" height="600">
-<img src="https://github.com/kodbutonu/weatherApp/blob/main/assets/photo_5931581420868845022_y%20(1).jpg" width="800" height="600">
+<img src="https://github.com/kodbutonu/weatherApp/blob/main/assets/photo_5931581420868845020_y%20(1).jpg" width="400" height="600">
+<img src="https://github.com/kodbutonu/weatherApp/blob/main/assets/photo_5931581420868845021_y%20(1).jpg" width="400" height="600">
+<img src="https://github.com/kodbutonu/weatherApp/blob/main/assets/photo_5931581420868845022_y%20(1).jpg" width="400" height="600">
 
 ## Başlangıç
 
