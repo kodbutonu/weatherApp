@@ -21,6 +21,11 @@ Projenin yerel olarak çalıştırılabilmesi için aşağıdaki yazılımlara i
 - [Expo CLI](https://expo.dev/) - Expo projeleri için CLI aracı
 - Bir iOS veya Android cihazı veya bir simülatör/emülatör
 
+### Uygulama
+Uygulamanın en son sürümünü aşağıdaki linkten indirebilirsiniz:
+
+[Buradan indirebilirsiniz](https://expo.dev/artifacts/eas/mzd3rfJMceckCcuWRwU5uz.apk)
+
 ### Kurulum
 
 1. Proje dosyalarını bu repo ile klonlayın:
@@ -29,7 +34,3 @@ Projenin yerel olarak çalıştırılabilmesi için aşağıdaki yazılımlara i
 git clone https://github.com/your-username/weatherApp.git
 cd weatherApp
 
-### Uygulama
-Uygulamanın en son sürümünü aşağıdaki linkten indirebilirsiniz:
-
-[Buradan indirebilirsiniz](https://expo.dev/artifacts/eas/mzd3rfJMceckCcuWRwU5uz.apk)
