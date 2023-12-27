@@ -15,6 +15,7 @@ import { fetchWeatherForecast, fetchLocations } from '../api/weather';
 import { debounce } from 'lodash';
 import { weatherImages } from '../constants';
 import ImageContainer from '../constants/components/ImageContainer';
+import 'expo-dev-client'
 
 const HomeScreen = () => {
   const [city, setCity] = useState(false);
@@ -87,40 +88,40 @@ const HomeScreen = () => {
         </View>
         {weatherData && (
           <View style={styles.weatherContainer}>
-            <ImageBackground 
+            <ImageBackground
               source={weatherImages[weatherData.current.condition.text]}
               style={styles.weatherImage}
             >
-             <View style={styles.design}>
+              <View style={styles.design}>
                 <View style={styles.description}>
                   <ImageContainer imageSource={require('../assets/images/rüzgars.png')} />
                   <Text style={styles.weatherText}>{weatherData.current.wind_mph}km</Text>
                   <Text style={styles.weatherCon}>Windy</Text>
                 </View>
                 <View style={styles.description}>
-                  <Text style={styles.temperature}>{ weatherData.current.feelslike_c}°</Text>
+                  <Text style={styles.temperature}>{weatherData.current.feelslike_c}°</Text>
                   <Text style={styles.weatherConditionn}>{weatherData.location.name}</Text>
                 </View>
                 <View style={styles.descriptionn}>
                   <ImageContainer imageSource={require('../assets/images/rainy-daya.png')} style={styles.img} />
                   <Text style={styles.weatherCondition}>{weatherData.current.condition.text}</Text>
                 </View>
-                
-             </View>
-             <View style={styles.ask}>
-               <View style={styles.icon}>
+
+              </View>
+              <View style={styles.ask}>
+                <View style={styles.icon}>
                   <Image source={require('../assets/images/cloudlywe.png')} />
                   <Text style={styles.weatherCondition}>Air Quality</Text>
-               </View>
+                </View>
                 <View style={styles.icon}>
-                <View style={styles.co}>
+                  <View style={styles.co}>
                     <Image source={require('../assets/images/pressure.png')} />
                     <View>
                       <Text style={styles.weatherCondition}>Pressure</Text>
                       <Text style={styles.weatherCondition}>{weatherData.current.pressure_in}</Text>
                     </View>
-                    
-                </View>
+
+                  </View>
                   <View style={styles.co}>
                     <Image source={require('../assets/images/cloudlywe.png')} />
                     <View>
@@ -138,7 +139,7 @@ const HomeScreen = () => {
 
                   </View>
                 </View>
-               <View style={styles.icon}>
+                <View style={styles.icon}>
                   <View style={styles.co}>
                     <Image source={require('../assets/images/tornado.png')} />
                     <View>
@@ -163,43 +164,43 @@ const HomeScreen = () => {
                     </View>
 
                   </View>
-               </View>
-             </View>
-             <View className="mb-2 space-y-3">
-  <View className="flex-row items-center mx-5 space-x-2" style={{marginTop:20,borderRadius:20,borderWidth:3,borderColor:'white',marginLeft:55,marginRight:30,justifyContent:'center',height:180}}>
-  <Text className="text-white text-base" style={styles.weatherConditio}>Daily Weather</Text>
- 
-  <ScrollView
-    horizontal
-    contentContainerStyle={{ paddingHorizontal: 15 }}
-    showsHorizontalScrollIndicator={false}
-  >
-    {weatherData?.forecast?.forecastday?.map((item, index) => {
-      const date = new Date(item.date);
-      const options = { weekday: 'long' };
-      let dayName = date.toLocaleDateString('en-US', options);
-      dayName = dayName.split(',')[0];
+                </View>
+              </View>
+              <View className="mb-2 space-y-3">
+                <View className="flex-row items-center mx-5 space-x-2" style={{ marginTop: 20, borderRadius: 20, borderWidth: 3, borderColor: 'white', marginLeft: 55, marginRight: 30, justifyContent: 'center', height: 180 }}>
+                  <Text className="text-white text-base" style={styles.weatherConditio}>Daily Weather</Text>
 
-      return (
-        <View
-          key={index}
-          className="flex justify-center items-center w-24 rounded-3xl py-3 space-y-1 mr-4"
-          style={{width:200,height:200,marginTop:20}}
-        >
+                  <ScrollView
+                    horizontal
+                    contentContainerStyle={{ paddingHorizontal: 15 }}
+                    showsHorizontalScrollIndicator={false}
+                  >
+                    {weatherData?.forecast?.forecastday?.map((item, index) => {
+                      const date = new Date(item.date);
+                      const options = { weekday: 'long' };
+                      let dayName = date.toLocaleDateString('en-US', options);
+                      dayName = dayName.split(',')[0];
 
-          <Image
-            source={{ uri: 'https:' + item?.day?.condition?.icon }}
-            style={{ width: 64, height: 64}}
-          />
-          <Text className="text-white" style={styles.weatherConditio}>{dayName}</Text>
-          <Text className="text-white text-xl font-semibold" style={styles.weatherConditio}>
-            {item?.day?.avgtemp_c}&#176;
-          </Text>
-        </View>
-      );
-    })}
-  </ScrollView>
-</View>
+                      return (
+                        <View
+                          key={index}
+                          className="flex justify-center items-center w-24 rounded-3xl py-3 space-y-1 mr-4"
+                          style={{ width: 200, height: 200, marginTop: 20 }}
+                        >
+
+                          <Image
+                            source={{ uri: 'https:' + item?.day?.condition?.icon }}
+                            style={{ width: 64, height: 64 }}
+                          />
+                          <Text className="text-white" style={styles.weatherConditio}>{dayName}</Text>
+                          <Text className="text-white text-xl font-semibold" style={styles.weatherConditio}>
+                            {item?.day?.avgtemp_c}&#176;
+                          </Text>
+                        </View>
+                      );
+                    })}
+                  </ScrollView>
+                </View>
               </View>
 
             </ImageBackground>
@@ -212,41 +213,43 @@ const HomeScreen = () => {
 
 
 const styles = StyleSheet.create({
-  design:{
-    display:'flex',
-    flexDirection:'row',
-    marginTop:50,
-    marginLeft:20,
-    marginRight:20,
-    height:200
+  design: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginTop: 50,
+    marginLeft: 20,
+    marginRight: 20,
+    height: 200
   },
-  co:{display:'flex',
- flexDirection:'row'},
-  icon:{
-    marginTop:10,
-    marginLeft:10,
-    display:'flex',
-    flexDirection:'row',
-    justifyContent:'space-between',
-    width:100,
-    height:'auto',
-    marginRight:10
+  co: {
+    display: 'flex',
+    flexDirection: 'row'
   },
-  iconimg:{
-  marginRight:100
+  icon: {
+    marginTop: 10,
+    marginLeft: 10,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: 100,
+    height: 'auto',
+    marginRight: 10
   },
-  description:{
-  alignItems:'center',
-    display:'flex',
-    flexDirection:'column',
-    height:40,
-    width:200 
-  }, 
-    locationContainer: { 
+  iconimg: {
+    marginRight: 100
+  },
+  description: {
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    height: 40,
+    width: 200
+  },
+  locationContainer: {
     backgroundColor: 'gray',
     maxHeight: 100,
-    height:100,
-    width:200
+    height: 100,
+    width: 200
   },
   locationItem: {
     flexDirection: 'row',
@@ -258,30 +261,30 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderBottomColor: 'gray',
   },
-  description:{
-    justifyContent:'center',
-    alignItems:'center',
-    marginLeft:20,
-    height:180
+  description: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 20,
+    height: 180
   },
-  ask:{
-    display:'flex',
-    flexDirection:'column',
-   marginLeft:60,
-   borderWidth:2,
-   height:200,
-   width:300,
-   borderRadius:20,
-   borderColor:'white'
+  ask: {
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: 60,
+    borderWidth: 2,
+    height: 200,
+    width: 300,
+    borderRadius: 20,
+    borderColor: 'white'
 
   },
   descriptionn: {
     justifyContent: 'center',
     alignItems: 'center',
-    height:100,
-    marginTop:20,
-    width:120,
-    marginRight:15
+    height: 100,
+    marginTop: 20,
+    width: 120,
+    marginRight: 15
   },
   locationText: {
     color: 'black',
@@ -290,12 +293,12 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-   
+
   },
-  location:{
-    backgroundColor:'gray',
-    height:100,
-    width:100
+  location: {
+    backgroundColor: 'gray',
+    height: 100,
+    width: 100
   },
   backgroundImage: {
     flex: 1,
@@ -303,7 +306,7 @@ const styles = StyleSheet.create({
 
   searchBarInput: {
     borderRadius: 5,
-   
+
 
   },
   searchBar: {
@@ -337,11 +340,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 20,
-    borderRadius:50,
-   textAlign:'center'
+    borderRadius: 50,
+    textAlign: 'center'
   },
   weatherText: {
-    marginTop:5,
+    marginTop: 5,
     fontSize: 18,
     color: 'white',
     marginBottom: 10,
@@ -350,15 +353,15 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'white',
     marginBottom: 10,
-    fontWeight:'italic',
-    alignItems:'center',
-    marginLeft:6
-   
+    fontWeight: 'italic',
+    alignItems: 'center',
+    marginLeft: 6
+
   },
   weatherImage: {
-   
-    borderColor:'white',
-    borderRadius:20,
+
+    borderColor: 'white',
+    borderRadius: 20,
     width: 390,
     height: 710,
   },
@@ -366,29 +369,29 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'white',
     marginTop: 10,
-    textAlign:'center',
-    justifyContent:'center'
+    textAlign: 'center',
+    justifyContent: 'center'
   },
   weatherConditio: {
     fontSize: 16,
     color: 'white',
-    marginLeft:20,
-    marginTop:5
- 
+    marginLeft: 20,
+    marginTop: 5
+
 
   },
   weatherConditionn: {
     fontSize: 26,
     color: 'white',
     marginBottom: 40,
-    marginRight:10
+    marginRight: 10
   },
   temperature: {
     fontSize: 60,
     color: 'white',
     fontWeight: 'bold',
-    alignItems:'center',
-    justifyContent:'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 });
 export default HomeScreen;
