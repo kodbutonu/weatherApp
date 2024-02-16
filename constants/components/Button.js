@@ -11,7 +11,7 @@ export default function Button({ text }) {
     const navigation = useNavigation(); // Navigation hook'u kullanarak navigation objesini alın
 
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('Welcome')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Welcome')} testID='customButton'>
             <View style={styles.button}>
                 <Text style={styles.text}>{text.toUpperCase()}</Text>
             </View>
